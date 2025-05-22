@@ -1,0 +1,182 @@
+/* ====== RESET GENERAL: BUENA PRÁCTICA ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que el padding/margin afecten el tamaño real */
+  }
+  
+  /* ====== VARIABLES DE COLOR ====== */
+  :root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+  }
+  
+  /* ====== FUENTE PERSONALIZADA ====== */
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url(./notifications-page-main-master/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans';
+  }
+  
+  /* ====== CONTENEDOR PRINCIPAL ====== */
+  .main {
+    padding: 24px 16px;
+  }
+  
+  /* ====== SECCIÓN DE NOTIFICACIONES ====== */
+  .notifications {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  
+  /* Título "Notifications" */
+  .notifications .title {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    font-size: 1.25rem; /* 20px */
+    word-spacing: 9px;
+  }
+  
+  /* Número azul al lado de "Notifications" */
+  .notifications .number {
+    background-color: var(--Blue);
+    color: var(--White);
+    display: inline-block;
+    width: 32px;
+    height: 25px;
+    text-align: center;
+    border-radius: 6px;
+    margin-left: 8px;
+  }
+  
+  /* Texto "Mark all as read" */
+  .notifications .mark {
+    color: var(--Dark-grayish-blue);
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .notifications .mark:hover {
+    color: var(--Blue); /* Cambia color al pasar el mouse */
+  }
+  
+  /* ====== ESTILO PARA CADA NOTIFICACIÓN ====== */
+  .post {
+    background-color: var(--Very-light-grayish-blue);
+    border-radius: 8px;
+    display: flex;
+    gap: 13px;
+    max-width: 343px;
+    padding: 16px;
+    min-width: 343px;
+    font-size: 0.875em; /* 14px */
+    cursor: pointer;
+    margin: 0 auto 10px;
+    color: var(--Dark-grayish-blue);
+    position: relative;
+  }
+  
+  /* ====== IMAGEN DEL USUARIO ====== */
+  .image {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+  }
+  
+  /* ====== NOMBRE DEL USUARIO ====== */
+  .name {
+    font-weight: bold;
+    color: var(--Very-dark-blue);
+  }
+  
+  .name:hover {
+    color: var(--Blue);
+  }
+  
+  /* ====== NOMBRE DE LA PUBLICACIÓN ====== */
+  .reaction {
+    font-weight: bold;
+  }
+  
+  .reaction:hover {
+    color: var(--Blue);
+  }
+  
+  /* ====== TIEMPO TRANSURRIDO ====== */
+  .time {
+    color: var(--Grayish-blue);
+    font-size: 0.875em;
+    font-weight: 500;
+  }
+  
+  /* ====== GRUPO DESTACADO (por ejemplo: Chess Club) ====== */
+  .group {
+    color: var(--Blue);
+    font-weight: bold;
+  }
+  
+  /* ====== CONTENEDOR DE MENSAJE PRIVADO ====== */
+  .message-container {
+    border: 1px solid var(--Light-grayish-blue-2);
+    border-radius: 5px;
+    padding: 16px;
+    margin-top: 12px;
+  }
+  
+  .message-container:hover {
+    background-color: var(--Light-grayish-blue-1);
+  }
+  
+  /* ====== MINIATURA DE IMAGEN (EJ: JUGADA DE AJEDREZ) ====== */
+  .picture {
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    right: 16px;
+  }
+  
+  /* ====== CIRCULITO ROJO DE NOTIFICACIÓN NO LEÍDA ====== */
+  .not-read {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; /* lo hace redondo */
+    margin-left: 8px;
+    background-color: var(--Red);
+  }
+  
+  /* ====== PIE DE PÁGINA (créditos) ====== */
+  .attribution {
+    font-size: 0.875em;
+    text-align: center;
+    margin-bottom: 46px;
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  /* ====== RESPONSIVE PARA TABLET/DESKTOP ====== */
+  @media (min-width: 768px) {
+    .main {
+      width: 730px;
+      margin: 0 auto;
+    }
+  
+    .post {
+      font-size: 1em;
+    }
+  }
+  
